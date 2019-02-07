@@ -10,6 +10,8 @@ class CreateCustomersTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->comment('고객 이름');
+            $table->json('address')->comment('고객 주소');
             $table->timestamps();
         });
     }
